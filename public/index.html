@@ -450,14 +450,36 @@
             <div>
                 <p>Certificamos que</p>
                 
-                <h1 id="name">Deivid Ribeiro</h1>
+                <h1 id="nome">Fuuuuu</h1>
                 
-                <p>Participou e presenciou como ouvinte o evento</p>
+                <p>
+                    Participou e presenciou como
+                    <span
+                        style="display: initial;"
+                        id="participacao">
+                        ouvinte o evento
+                    </span>
+                </p>
                 
                 <h2>FrontInUDI</h2>
                 
-                <p>Com carga estimada de 4 (quatro) horas,</p>
-                <p>com início e término em 25/11/2017</p>
+                <p>
+                    Com carga estimada de 
+                    <span
+                        style="display: initial;"
+                        id="carga">
+                        4 (quatro)
+                    </span>
+                    horas,
+                </p>
+                <p>
+                    com início e término em
+                    <span
+                        style="display: initial;"
+                        id="datainicio">
+                        25/11/2017
+                    </span>
+                </p>
             </div>
             
         </article>
@@ -468,6 +490,7 @@
             <div
                 class="footer-sponsor">
                 <img
+                    id="sponsorimage"
                     src="petsi.png">
             </div>
         </footer>
@@ -475,7 +498,7 @@
     </section>
 
     <script>
-        const pName = document.querySelector('#name')
+        const pName = document.querySelector('#nome')
         let index = 0
         // attendees = [
         //     'Artur Aquino',
@@ -522,7 +545,7 @@
             // "Joao Paulo Avila",
             "Jorcelino Júnior",
             "Leonardo Pimentel",
-            "Lucas Vilaboim",
+            // "Lucas Vilaboim",
             // "Lucas Menezes",
             "Mateus Henrique",
             "Matheus Eduardo",
@@ -530,16 +553,20 @@
             "Rafael Ericson",
             "Renato Rodrigues",
             "Rodrigo Reis",
-            "Tarcísio Abadio de Magalhães Jún",
-            "Thalys Guimarães"
+            "Tarcísio Abadio de Magalhães Júnior"
+            // "Thalys Guimarães"
         ]
 
         console.log(attendees.length)
 
-        setInterval(() => {
+        const changeName = () => {
             pName.textContent = attendees[index > (attendees.length - 1) ? 0 : index]
             index++
-        }, 1E4)
+        }
+
+        changeName()
+
+        setInterval(changeName, 1500)
     </script>
 
 </body>
